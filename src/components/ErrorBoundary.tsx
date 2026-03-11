@@ -33,7 +33,9 @@ export class ErrorBoundary extends Component<Props, State> {
                         Something went wrong
                     </Typography>
                     <Typography variant="body" className="mb-8">
-                        {this.state.error?.message || 'An unexpected error occurred.'}
+                        {process.env.NODE_ENV === 'development'
+                            ? this.state.error?.message
+                            : 'An unexpected error occurred. Please try reloading the page.'}
                     </Typography>
                     <Button onClick={() => window.location.reload()}>
                         Reload Page

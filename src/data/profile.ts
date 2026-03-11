@@ -50,7 +50,7 @@ export const profileData: ProfileData = {
     role: "M.S. Candidate in Artificial Intelligence in Business",
     contact: {
         email: "mhu29@Simon.rochester.edu",
-        linkedin: "www.linkedin.com/in/mingzhi-h",
+        linkedin: "https://www.linkedin.com/in/mingzhi-h",
         location: "Rochester, New York, United States",
     },
     summary: [

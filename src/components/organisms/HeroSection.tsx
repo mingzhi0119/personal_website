@@ -27,19 +27,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data, className = '' }
 
                 <div className="flex items-center justify-center gap-4 pt-8">
                     <Button
-                        asChild
+                        href={`mailto:${data.contact.email}`}
                         size="lg"
                         className="shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all"
                     >
-                        <a href={`mailto:${data.contact.email}`}>Contact Me</a>
+                        Contact Me
                     </Button>
                     <Button
-                        asChild
+                        href={data.contact.linkedin}
                         variant="outline"
                         size="lg"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="hover:-translate-y-1 transition-all"
                     >
-                        <a href={`https://${data.contact.linkedin}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        LinkedIn
                     </Button>
                 </div>
             </div>

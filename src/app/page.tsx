@@ -1,6 +1,4 @@
-'use client';
-
-import { useProfileData } from '@/hooks/useProfileData';
+import { profileData } from '@/data/profile';
 import {
   HeroSection,
   ExperienceSection,
@@ -10,38 +8,27 @@ import {
   Navbar,
   Footer
 } from '@/components/organisms';
-import { Typography } from '@/components/atoms';
 
 export default function Home() {
-  const { data, loading } = useProfileData();
-
-  if (loading || !data) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <Typography variant="muted" className="animate-pulse">Loading profile...</Typography>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen font-sans">
       <Navbar />
       <main className="flex flex-col items-center w-full">
-        <HeroSection data={data} className="w-full" />
+        <HeroSection data={profileData} className="w-full" />
         <div className="w-full bg-background">
-          <ExperienceSection experience={data.experience} />
+          <ExperienceSection experience={profileData.experience} />
         </div>
         <div className="w-full bg-muted/30">
-          <EducationSection education={data.education} />
+          <EducationSection education={profileData.education} />
         </div>
         <div className="w-full bg-background">
-          <SkillSection skills={data.skills} />
+          <SkillSection skills={profileData.skills} />
         </div>
         <div className="w-full">
-          <ProjectSection projects={data.projects} />
+          <ProjectSection projects={profileData.projects} />
         </div>
       </main>
-      <Footer contact={data.contact} name={data.name} />
+      <Footer contact={profileData.contact} name={profileData.name} />
     </div>
   );
 }
