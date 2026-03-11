@@ -26,12 +26,18 @@ export interface EducationItem {
     description?: string;
 }
 
+export interface ProjectLink {
+    label: string;
+    href: string;
+}
+
 export interface ProjectItem {
     id: string;
     title: string;
     context: string;
     description: string[];
     technologies: string[];
+    links?: ProjectLink[];
 }
 
 export interface ProfileData {
@@ -127,7 +133,23 @@ export const profileData: ProfileData = {
     ],
     projects: [
         {
-            id: "proj-1",
+            id: "proj-gem-duel",
+            title: "Gem Duel",
+            context: "Personal Full-Stack Project · React 18 + TypeScript + Vite + Electron",
+            description: [
+                "Engineered a 9-phase deterministic state machine eliminating illegal-state bugs via exhaustive TypeScript discriminated unions and compile-time never-type coverage across 20+ action types.",
+                "Architected real-time P2P online multiplayer using WebRTC/PeerJS with an authoritative host-sync protocol, and a Roguelike expansion featuring 24+ asymmetric tiered buffs and 3 dynamically configurable win conditions.",
+                "Built a heuristic AI opponent (5-priority decision tree) and an 11-suite, 5,000-iteration chaos test pipeline (Vitest) validating 3 core state invariants per cycle — fully integrated into GitHub Actions CI/CD.",
+                "Designed a telemetry-ready data model tracking 6 match-level KPIs per session, structured for direct ingestion into a BI dashboard for evidence-based product balance decisions."
+            ],
+            technologies: ["React 18", "TypeScript", "Vite", "Electron", "WebRTC/PeerJS", "Immer", "Vitest", "GitHub Actions", "Tailwind CSS"],
+            links: [
+                { label: "Live Demo", href: "https://gem-duel-dev.vercel.app" },
+                { label: "GitHub", href: "https://github.com/mingzhi0119/GemDuel-Dev" }
+            ]
+        },
+        {
+            id: "proj-ground-motion",
             title: "Seismic Ground Motion Simulation",
             context: "Tsinghua Undergraduate Thesis",
             description: [
