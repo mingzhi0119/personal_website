@@ -47,41 +47,65 @@ export interface ProfileData {
 
 export const profileData: ProfileData = {
     name: "Mingzhi Hu",
-    role: "M.S. Candidate in Artificial Intelligence in Business",
+    role: "M.S. Candidate in AI in Business",
     contact: {
-        email: "mhu29@Simon.rochester.edu",
-        linkedin: "https://www.linkedin.com/in/mingzhi-h",
-        location: "Rochester, New York, United States",
+        email: "mhu29@simon.rochester.edu",
+        linkedin: "https://www.linkedin.com/in/mingzhi-h/",
+        location: "Rochester, NY",
     },
     summary: [
-        "Master of Science candidate in Artificial Intelligence in Business at the University of Rochester's Simon Business School, with an expected graduation in December 2026. Previously earned a Bachelor of Engineering in Civil Engineering and Systems from Tsinghua University.",
-        "Professional experience includes a role as a Full-time Business Manager at China Aviation Planning and Design Institute (Group) Co., Ltd. Led business negotiations contributing to a 15% annual growth from deals valued over $2 million, managed client quotations reducing bad debt risk by 6%, and oversaw the bidding process to secure contracts.",
-        "Recipient of the Dean's Scholarship from Simon Business School and member of the Simon Data Analytics Club."
+        "Master of Science candidate in AI in Business at the University of Rochester's Simon Business School (GPA: 3.85/4.0), with an expected graduation in December 2026. Recipient of the Dean's Scholarship and Dean's List honors.",
+        "Experienced Business Manager and Graduate Student Analyst with a strong track record of leveraging data analytics and machine learning to drive business growth, optimize customer retention, and streamline operations.",
+        "Proficient in Python, R, Matlab, and SQL, with hands-on experience in building predictive models using TensorFlow, Keras, and Scikit-learn."
     ],
     skills: [
         {
-            category: "Core Competencies",
-            items: ["Machine Learning", "Artificial Intelligence (AI)", "Bid Processes", "Data Analytics"]
-        },
-        {
             category: "Programming Languages",
-            items: ["Python", "R", "Matlab"]
+            items: ["Python", "R", "Matlab", "C", "Stata", "MySQL", "LaTeX"]
         },
         {
-            category: "Libraries & Tools",
-            items: ["TensorFlow", "Keras", "Scikit-learn", "MySQL", "LaTeX"]
+            category: "Data & Machine Learning",
+            items: ["TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy"]
+        },
+        {
+            category: "Certifications",
+            items: ["Advanced Certificate of Achievement in Data Management and Warehousing"]
         }
     ],
     experience: [
         {
             id: "exp-1",
-            company: "Aviation Industry Corporation of China / China Aviation Planning and Design Institute (Group)",
-            title: "Business Manager",
+            company: "Graduate Student Analyst",
+            title: "Customer Churn Prediction & Retention Strategy",
+            location: "Rochester, NY",
+            period: "September 2025 - December 2025",
+            responsibilities: [
+                "Engineered features from transactional data in Python (Pandas) and conducted EDA to address class imbalance, ensuring data quality for predictive modeling.",
+                "Developed and validated a Logistic Regression model via Scikit-learn, optimizing performance via Cross-Validation; achieved an 0.88 AUC-ROC score, outperforming baseline accuracy by 15%.",
+                "Leveraged model interpretability to identify key attrition drivers and presented strategic recommendations to stakeholders, projecting a 5% reduction in churn."
+            ]
+        },
+        {
+            id: "exp-2",
+            company: "China Aviation Planning and Design Institute Co., Ltd",
+            title: "Business Manager, Avionics Engineering Division",
+            location: "Beijing, China",
             period: "July 2024 - June 2025",
             responsibilities: [
-                "Business Negotiations: Led high-stakes business negotiations to secure new partnerships, developing market expansion strategies that resulted in a 15% annual growth rate from deals valued at over $2 million.",
-                "Quotations and Client Relations: Managed detailed client quotations and implemented a new customer credit assessment system, reducing bad debt risk by 6%.",
-                "Bidding and Documentation: Oversaw the end-to-end bidding process, coordinating with cross-functional teams to prepare and present compelling proposals, resulting in a high contract success rate."
+                "Spearheaded business negotiations to secure new partnerships, developing market-expansion strategies, drove a 15% annual growth rate from deals valued at over $2 million.",
+                "Implemented credit assessment system for quotations, reducing bad debt risk by 6%.",
+                "Directed the end-to-end bidding process, coordinating with cross-functional teams to prepare proposals and achieving a 65% contract success rate."
+            ]
+        },
+        {
+            id: "exp-3",
+            company: "Department of External Relations, Tsinghua University",
+            title: "Vice President",
+            location: "Beijing, China",
+            period: "Undergraduate",
+            responsibilities: [
+                "Secured $10,000 in corporate sponsorship to fund two flagship university events: the Freshman Welcome Gala and the annual 'December 9th' Choral Competition, attended by over 2,000 students.",
+                "Established and led a new alumni mentorship initiative, creating an outreach campaign, connected over 50 students with industry professionals for career guidance."
             ]
         }
     ],
@@ -89,27 +113,28 @@ export const profileData: ProfileData = {
         {
             id: "edu-1",
             institution: "Simon Business School, University of Rochester",
-            degree: "Master of Science, Artificial Intelligence",
-            period: "August 2025 - December 2026 (Expected)",
+            degree: "Master of Science in AI in Business",
+            period: "Expected December 2026",
+            description: "GPA: 3.85/4.0 | Honors: Dean's Scholarship, Dean's List | Coursework: AI and Business, Core Statistics, Predictive and Causal Analytics, AI and Deep Learning, Data Management.",
         },
         {
             id: "edu-2",
             institution: "Tsinghua University",
-            degree: "Bachelor of Engineering, Civil Engineering",
-            period: "August 2019 - June 2024",
+            degree: "Bachelor of Engineering in Civil Engineering and Systems",
+            period: "June 2024",
+            description: "Honors: Social Work Excellence Scholarship | Coursework: Probability and Statistics, Operational Research, Data Science, Entrepreneurial Management, Corporate Finance.",
         }
     ],
     projects: [
         {
             id: "proj-1",
-            title: "Physical Simulation of Ground Motion in Valleys",
-            context: "Undergraduate Diploma Project at Tsinghua University",
+            title: "Seismic Ground Motion Simulation",
+            context: "Tsinghua Undergraduate Thesis",
             description: [
-                "Built a 3D numerical simulation model for physical simulation of ground motion.",
-                "Applied machine learning techniques to predict soil property variability.",
-                "Implemented a convolutional neural network (CNN) to improve predictive modeling precision."
+                "Developed a 3D numerical simulation model using the spectral element method and generated random fields of soil shear wave velocity in Matlab to analyze seismic responses.",
+                "Predicted soil property variability by implementing a CNN model (TensorFlow/Keras) on historical seismic data."
             ],
-            technologies: ["Python", "TensorFlow", "Keras", "Machine Learning"]
+            technologies: ["Matlab", "Python", "TensorFlow", "Keras", "CNN"]
         }
     ]
 };
