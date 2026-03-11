@@ -60,9 +60,10 @@ export const profileData: ProfileData = {
         location: "Rochester, NY",
     },
     summary: [
-        "Master of Science candidate in AI in Business at the University of Rochester's Simon Business School (GPA: 3.85/4.0), with an expected graduation in December 2026. Recipient of the Dean's Scholarship and Dean's List honors.",
-        "Experienced Business Manager and Graduate Student Analyst with a strong track record of leveraging data analytics and machine learning to drive business growth, optimize customer retention, and streamline operations.",
-        "Proficient in Python, R, Matlab, and SQL, with hands-on experience in building predictive models using TensorFlow, Keras, and Scikit-learn."
+        "Bridging the gap between complex engineering, data science, and business strategy.",
+        "I am an M.S. candidate in AI in Business at the University of Rochester, combining a rigorous foundation in traditional engineering (Tsinghua University) with proven industry experience in B2B business management and technical project lifecycles.",
+        "I specialize in translating complex, ambiguous business problems into scalable technical solutions. Whether it's architecting a machine learning pipeline for customer retention, building deterministic state machines for web applications, or driving cross-functional bidding strategies, I focus on delivering measurable, data-driven product impact.",
+        "Core Stack: Python, SQL, TypeScript/React, Scikit-learn, TensorFlow, and CI/CD pipelines. Currently seeking 2026 full-time opportunities in Data Analytics, Technical Product Management, or AI Strategy."
     ],
     skills: [
         {
@@ -87,18 +88,6 @@ export const profileData: ProfileData = {
         }
     ],
     experience: [
-        {
-            id: "exp-1",
-            company: "Graduate Student Analyst",
-            title: "Customer Churn Prediction & Retention Strategy",
-            location: "Rochester, NY",
-            period: "September 2025 - December 2025",
-            responsibilities: [
-                "Engineered features from transactional data in Python (Pandas) and conducted EDA to address class imbalance, ensuring data quality for predictive modeling.",
-                "Developed and validated a Logistic Regression model via Scikit-learn, optimizing performance via Cross-Validation; achieved an 0.88 AUC-ROC score, outperforming baseline accuracy by 15%.",
-                "Leveraged model interpretability to identify key attrition drivers and presented strategic recommendations to stakeholders, projecting a 5% reduction in churn."
-            ]
-        },
         {
             id: "exp-2",
             company: "China Aviation Planning and Design Institute Co., Ltd",
@@ -140,6 +129,17 @@ export const profileData: ProfileData = {
         }
     ],
     projects: [
+        {
+            id: "proj-churn-prediction",
+            title: "Customer Churn Prediction & Retention Strategy",
+            context: "Academic ML Project",
+            description: [
+                "Architected an end-to-end machine learning pipeline in Python (Pandas, Scikit-learn) to predict customer churn, engineering behavioral features from raw transactional datasets and rigorously handling class imbalance to ensure robust predictive quality.",
+                "Trained and hyperparameter-tuned a Logistic Regression model utilizing cross-validation, achieving an 0.88 AUC-ROC score (a 15% lift over baseline) by optimizing the decision threshold to minimize false-negative business costs.",
+                "Translated model interpretability (feature importance) into actionable product strategies, formulating data-driven retention initiatives and pricing interventions projected to mitigate churn by 5%."
+            ],
+            technologies: ["Python", "Pandas", "Scikit-learn", "Machine Learning", "Data Analytics"]
+        },
         {
             id: "proj-gem-duel",
             title: "Gem Duel",
