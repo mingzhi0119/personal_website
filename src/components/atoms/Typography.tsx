@@ -7,13 +7,23 @@ export interface TypographyProps {
     as?: React.ElementType;
 }
 
+const semanticMap: Record<TypographyProps['variant'], React.ElementType> = {
+    h1: 'h1',
+    h2: 'h2',
+    h3: 'h3',
+    h4: 'h4',
+    body: 'p',
+    small: 'small',
+    muted: 'p',
+};
+
 export const Typography: React.FC<TypographyProps> = ({
     variant,
     children,
     className = '',
     as,
 }) => {
-    const Component = as || getSemanticElement(variant);
+    const Component = as || semanticMap[variant];
 
     const baseStyles = {
         h1: 'text-4xl md:text-6xl font-extrabold tracking-tight text-foreground',
@@ -31,16 +41,3 @@ export const Typography: React.FC<TypographyProps> = ({
         </Component>
     );
 };
-
-function getSemanticElement(variant: TypographyProps['variant']): React.ElementType {
-    switch (variant) {
-        case 'h1': return 'h1';
-        case 'h2': return 'h2';
-        case 'h3': return 'h3';
-        case 'h4': return 'h4';
-        case 'body': return 'p';
-        case 'small': return 'small';
-        case 'muted': return 'p';
-        default: return 'p';
-    }
-}
