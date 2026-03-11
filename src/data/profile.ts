@@ -67,11 +67,19 @@ export const profileData: ProfileData = {
     skills: [
         {
             category: "Programming Languages",
-            items: ["Python", "R", "Matlab", "C", "Stata", "MySQL", "LaTeX"]
+            items: ["Python", "SQL (MySQL, PostgreSQL)", "TypeScript/JavaScript", "R", "C/C++"]
         },
         {
-            category: "Data & Machine Learning",
-            items: ["TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy"]
+            category: "Data Science & ML",
+            items: ["TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy", "SciPy"]
+        },
+        {
+            category: "Software Engineering & Web",
+            items: ["React", "Node.js", "Git", "CI/CD (GitHub Actions)", "Docker", "WebRTC"]
+        },
+        {
+            category: "Data Viz & Tools",
+            items: ["Tableau", "Power BI", "Excel", "LaTeX", "Matlab", "Stata"]
         },
         {
             category: "Certifications",
@@ -121,7 +129,7 @@ export const profileData: ProfileData = {
             institution: "Simon Business School, University of Rochester",
             degree: "Master of Science in AI in Business",
             period: "Expected December 2026",
-            description: "GPA: 3.85/4.0 | Honors: Dean's Scholarship, Dean's List | Coursework: AI and Business, Core Statistics, Predictive and Causal Analytics, AI and Deep Learning, Data Management.",
+            description: "GPA: 3.85/4.0 | Honors: Dean's Scholarship, Dean's List | Coursework: AI and Business, Product Strategy & Management, Predictive and Causal Analytics, A/B Testing, Data Management.",
         },
         {
             id: "edu-2",
