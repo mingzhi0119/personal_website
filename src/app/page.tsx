@@ -3,6 +3,7 @@ import {
   HeroSection,
   ExperienceSection,
   EducationSection,
+  FeaturedProjectSection,
   ProjectSection,
   SkillSection,
   Navbar,
@@ -23,6 +24,9 @@ export default function Home() {
         </div>
         <div className="w-full bg-background">
           <SkillSection skills={profileData.skills} />
+        </div>
+        <div className="w-full bg-background">
+          <FeaturedProjectSection project={profileData.featuredProject} />
         </div>
         <div className="w-full">
           <ProjectSection projects={profileData.projects} />

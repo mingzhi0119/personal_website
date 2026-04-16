@@ -31,6 +31,17 @@ export interface ProjectLink {
     href: string;
 }
 
+export interface FeaturedProjectItem {
+    id: string;
+    title: string;
+    context: string;
+    headline: string;
+    summary: string;
+    highlights: string[];
+    technologies: string[];
+    links: ProjectLink[];
+}
+
 export interface ProjectItem {
     id: string;
     title: string;
@@ -45,6 +56,7 @@ export interface ProfileData {
     role: string;
     contact: ContactInfo;
     summary: string[];
+    featuredProject: FeaturedProjectItem;
     skills: Skill[];
     experience: ExperienceItem[];
     education: EducationItem[];
@@ -65,6 +77,36 @@ export const profileData: ProfileData = {
         "I specialize in translating complex, ambiguous business problems into scalable technical solutions. Whether it's architecting a machine learning pipeline for customer retention, building deterministic state machines for web applications, or driving cross-functional bidding strategies, I focus on delivering measurable, data-driven product impact.",
         "Core Stack: Python, SQL, TypeScript/React, Scikit-learn, TensorFlow, and CI/CD pipelines. Currently seeking 2026 full-time opportunities in Data Analytics, Technical Product Management, or AI Strategy."
     ],
+    featuredProject: {
+        id: "feat-goat-ai",
+        title: "GOAT AI",
+        context: "Featured Engineering Story · React 19 + TypeScript + Vite + FastAPI + Python + Ollama + SQLite/Postgres + Tauri",
+        headline: "Built a self-hostable AI systems product spanning chat, retrieval, bounded runtime workflows, and desktop distribution.",
+        summary: "GOAT AI is a local-first full-stack AI product I engineered as a typed React SPA with a FastAPI backend, stable streaming contracts, deployment-mode isolation, durable sessions and artifacts, and operator-visible runtime controls across local, school-server, remote, and desktop environments.",
+        highlights: [
+            "Designed typed React/FastAPI contracts with structured SSE events, stable JSON errors, and fail-fast deployment isolation across local, school-server, remote, and desktop modes.",
+            "Built a production-style Ollama integration layer with typed streaming, FIFO inference queueing, rate limiting, concurrency gating, and remote-safe model allowlisting.",
+            "Delivered retrieval-backed document workflows plus bounded workbench and code-sandbox runtimes with durable records, explicit capability gating, and fail-closed recovery behavior.",
+            "Extended the product through Tauri desktop packaging, a PyInstaller backend sidecar, and CI evidence for packaging, diagnostics, and release governance."
+        ],
+        technologies: [
+            "React 19",
+            "TypeScript",
+            "Vite",
+            "FastAPI",
+            "Python",
+            "Ollama",
+            "SQLite",
+            "Postgres",
+            "Tauri",
+            "Docker",
+            "GitHub Actions"
+        ],
+        links: [
+            { label: "Live Demo", href: "https://goat-dev.vercel.app/" },
+            { label: "GitHub", href: "https://github.com/mingzhi0119/GOAT_AI/" }
+        ]
+    },
     skills: [
         {
             category: "Programming Languages",
@@ -129,6 +171,21 @@ export const profileData: ProfileData = {
         }
     ],
     projects: [
+        {
+            id: "proj-goat-ai",
+            title: "GOAT AI",
+            context: "Personal Full-Stack AI Systems Project · React 19 + TypeScript + Vite + FastAPI + Python + Ollama + Tauri",
+            description: [
+                "Engineered a self-hostable AI product spanning chat, retrieval, durable sessions, artifact generation, browser access control, and bounded workbench/runtime flows across local, school-server, remote, and desktop deployments.",
+                "Architected typed frontend/backend contracts, stable SSE and error surfaces, deployment-mode isolation, and an Ollama integration with FIFO queueing, rate limiting, concurrency control, and public-safe model policies.",
+                "Delivered retrieval pipelines, safe code-execution boundaries, and Tauri desktop packaging with CI-backed release evidence, startup diagnostics, and operational governance."
+            ],
+            technologies: ["React 19", "TypeScript", "Vite", "FastAPI", "Python", "Ollama", "SQLite", "Postgres", "Tauri", "Docker", "GitHub Actions"],
+            links: [
+                { label: "Live Demo", href: "https://goat-dev.vercel.app/" },
+                { label: "GitHub", href: "https://github.com/mingzhi0119/GOAT_AI/" }
+            ]
+        },
         {
             id: "proj-churn-prediction",
             title: "Customer Churn Prediction & Retention Strategy",

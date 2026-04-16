@@ -33,6 +33,7 @@ const NAV_LINKS = [
     { href: '#experience', label: 'Experience' },
     { href: '#education', label: 'Education' },
     { href: '#skills', label: 'Skills' },
+    { href: '#featured-work', label: 'Featured Work' },
     { href: '#projects', label: 'Projects' },
 ];
 
