@@ -37,6 +37,7 @@ export interface FeaturedProjectItem {
     context: string;
     headline: string;
     summary: string;
+    details: string[];
     highlights: string[];
     technologies: string[];
     links: ProjectLink[];
@@ -83,6 +84,11 @@ export const profileData: ProfileData = {
         context: "Featured Engineering Story · React 19 + TypeScript + Vite + FastAPI + Python + Ollama + SQLite/Postgres + Tauri",
         headline: "Built a self-hostable AI systems product spanning chat, retrieval, bounded runtime workflows, and desktop distribution.",
         summary: "GOAT AI is a local-first full-stack AI product I engineered as a typed React SPA with a FastAPI backend, stable streaming contracts, deployment-mode isolation, durable sessions and artifacts, and operator-visible runtime controls across local, school-server, remote, and desktop environments.",
+        details: [
+            "The project was designed as more than a chat wrapper: I treated it like a systems product with explicit runtime boundaries, typed interfaces, durable state, and a deployment story that could survive real hosting constraints instead of only local demos.",
+            "On the product surface, it combines retrieval-backed document workflows, browser-based access control, artifact generation, and bounded research or workbench execution. Under the hood, those capabilities are separated by contracts and policy controls so the system can evolve without collapsing backend orchestration, runtime execution, and persistence into one fragile layer.",
+            "What makes the project portfolio-worthy for me is the operational layer around it: queueing and rate limiting for inference, capability gating for risky runtime features, backup and storage boundary design, and desktop packaging with startup diagnostics and CI evidence for release quality."
+        ],
         highlights: [
             "Designed typed React/FastAPI contracts with structured SSE events, stable JSON errors, and fail-fast deployment isolation across local, school-server, remote, and desktop modes.",
             "Built a production-style Ollama integration layer with typed streaming, FIFO inference queueing, rate limiting, concurrency gating, and remote-safe model allowlisting.",

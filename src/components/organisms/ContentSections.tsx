@@ -42,6 +42,14 @@ export const FeaturedProjectSection: React.FC<FeaturedProjectSectionProps> = ({ 
                             {project.summary}
                         </Typography>
 
+                        <div className="space-y-4">
+                            {project.details.map((detail) => (
+                                <Typography key={detail} variant="body" className="text-muted-foreground">
+                                    {detail}
+                                </Typography>
+                            ))}
+                        </div>
+
                         <div className="flex flex-wrap gap-3">
                             {project.links.map((link, index) => (
                                 <Button
